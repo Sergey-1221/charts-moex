@@ -61,7 +61,12 @@ def get_data_moex(list_ticker):
 
 @app.route("/")
 def index():
-    return render_template('create.html')
+    return render_template('index.html')
+
+
+@app.route("/iframe")
+def iframe():
+    return render_template('iframe.html')
     
 
 @app.route("/chart_data", methods = ['GET'])
