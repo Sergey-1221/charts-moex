@@ -42,6 +42,7 @@ def get_data_moex(list_ticker):
         key = item[0]+"_"+item[1]
         res_data[key] = {
             "name": f"{item[0]} {item[1]}",
+            "chart_num": f"{item[2]}",
             "value": []
         }   
 
