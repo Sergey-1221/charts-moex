@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, jsonify
-from moexalgo import Market, Ticker
+
 import pandas as pd
 
+
+
+from moexalgo import Market, Ticker, session
+session.authorize('sergey.loginov.1221@yandex.ru', '$znKKUb@Cf7tpHd')
 app = Flask(__name__)
 
 
@@ -76,6 +80,7 @@ def chart_data():
     for i in request.args:
         list_ticker.append(request.args[i].split("|"))
 
+    print(list_ticker)
     res = get_data_moex(list_ticker)
     return res
 

@@ -1,6 +1,8 @@
-from moexalgo import Market, Ticker
+from moexalgo import Market, Ticker, session
 import pandas as pd
 
+
+session.authorize('sergey.loginov.1221@yandex.ru', '$znKKUb@Cf7tpHd')
 sber = Ticker('SBER')
 stocks = Market('stocks')
 
